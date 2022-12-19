@@ -51,6 +51,11 @@
 		9422DA1A29506378002D0BE3 /* UberCloneSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				9422DA2F29506662002D0BE3 /* App */,
+				9422DA2E29506660002D0BE3 /* Core */,
+				9422DA2D2950665C002D0BE3 /* Extension */,
+				9422DA2C29506659002D0BE3 /* Managers */,
+				9422DA292950664C002D0BE3 /* Models */,
 				9422DA1B29506378002D0BE3 /* UberCloneSwiftUIApp.swift */,
 				9422DA1D29506378002D0BE3 /* ContentView.swift */,
 				9422DA1F2950637A002D0BE3 /* Assets.xcassets */,
@@ -65,6 +70,41 @@
 				9422DA222950637A002D0BE3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9422DA292950664C002D0BE3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9422DA2C29506659002D0BE3 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		9422DA2D2950665C002D0BE3 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		9422DA2E29506660002D0BE3 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		9422DA2F29506662002D0BE3 /* App */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
