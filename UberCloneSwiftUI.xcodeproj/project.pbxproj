@@ -11,6 +11,9 @@
 		9422DA1E29506378002D0BE3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9422DA1D29506378002D0BE3 /* ContentView.swift */; };
 		9422DA202950637A002D0BE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9422DA1F2950637A002D0BE3 /* Assets.xcassets */; };
 		9422DA232950637A002D0BE3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9422DA222950637A002D0BE3 /* Preview Assets.xcassets */; };
+		9422DA33295066F8002D0BE3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9422DA32295066F8002D0BE3 /* HomeView.swift */; };
+		9422DA352950674C002D0BE3 /* UberMapViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9422DA342950674C002D0BE3 /* UberMapViewRepresentable.swift */; };
+		9422DA3729506939002D0BE3 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9422DA3629506939002D0BE3 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		9422DA1D29506378002D0BE3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9422DA1F2950637A002D0BE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9422DA222950637A002D0BE3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9422DA32295066F8002D0BE3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		9422DA342950674C002D0BE3 /* UberMapViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UberMapViewRepresentable.swift; sourceTree = "<group>"; };
+		9422DA3629506939002D0BE3 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +88,7 @@
 		9422DA2C29506659002D0BE3 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				9422DA3629506939002D0BE3 /* LocationManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -96,6 +103,8 @@
 		9422DA2E29506660002D0BE3 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				9422DA31295066D1002D0BE3 /* ViewModel */,
+				9422DA30295066CE002D0BE3 /* Views */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -105,6 +114,22 @@
 			children = (
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		9422DA30295066CE002D0BE3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9422DA32295066F8002D0BE3 /* HomeView.swift */,
+				9422DA342950674C002D0BE3 /* UberMapViewRepresentable.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9422DA31295066D1002D0BE3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,7 +202,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9422DA33295066F8002D0BE3 /* HomeView.swift in Sources */,
 				9422DA1E29506378002D0BE3 /* ContentView.swift in Sources */,
+				9422DA3729506939002D0BE3 /* LocationManager.swift in Sources */,
+				9422DA352950674C002D0BE3 /* UberMapViewRepresentable.swift in Sources */,
 				9422DA1C29506378002D0BE3 /* UberCloneSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,6 +338,7 @@
 				DEVELOPMENT_TEAM = L3D3A22YK5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app need to access your device location to show in map";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -339,6 +368,7 @@
 				DEVELOPMENT_TEAM = L3D3A22YK5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app need to access your device location to show in map";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
