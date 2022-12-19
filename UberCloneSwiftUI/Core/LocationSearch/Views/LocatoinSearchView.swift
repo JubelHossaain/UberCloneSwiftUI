@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LocatoinSearchView: View {
     @State private var startLocationText = ""
-    @Binding var showLocationSearchView: Bool
+    @Binding var mapState : MapState
     @EnvironmentObject var viewModel: LocationSearchViewModel
     var body: some View {
         VStack{
@@ -55,7 +55,7 @@ struct LocatoinSearchView: View {
                         LocationSearchResultCell(title: result.title, subTitle: result.subtitle)
                             .onTapGesture {
                                 viewModel.selectedLocaton(result)
-                                showLocationSearchView.toggle()
+                                mapState = .locationSelected
                             }
                     }
                 }
@@ -67,6 +67,6 @@ struct LocatoinSearchView: View {
 
 struct LocatoinSearchView_Previews: PreviewProvider {
     static var previews: some View {
-        LocatoinSearchView(showLocationSearchView: .constant(false))
+        LocatoinSearchView(mapState: .constant(.searchingForLocation))
     }
 }

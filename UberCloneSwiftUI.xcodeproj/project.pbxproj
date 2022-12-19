@@ -19,6 +19,7 @@
 		9422DA4029507699002D0BE3 /* LocatoinSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9422DA3F29507699002D0BE3 /* LocatoinSearchView.swift */; };
 		9422DA4229507A12002D0BE3 /* LocationSearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9422DA4129507A12002D0BE3 /* LocationSearchResultCell.swift */; };
 		9422DA442950861C002D0BE3 /* LocationSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9422DA432950861C002D0BE3 /* LocationSearchViewModel.swift */; };
+		9422DA4629509C86002D0BE3 /* MapViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9422DA4529509C86002D0BE3 /* MapViewState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		9422DA3F29507699002D0BE3 /* LocatoinSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocatoinSearchView.swift; sourceTree = "<group>"; };
 		9422DA4129507A12002D0BE3 /* LocationSearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchResultCell.swift; sourceTree = "<group>"; };
 		9422DA432950861C002D0BE3 /* LocationSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewModel.swift; sourceTree = "<group>"; };
+		9422DA4529509C86002D0BE3 /* MapViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 		9422DA292950664C002D0BE3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9422DA4529509C86002D0BE3 /* MapViewState.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				9422DA3C29507472002D0BE3 /* LocatoinSearchActivityView.swift in Sources */,
 				9422DA442950861C002D0BE3 /* LocationSearchViewModel.swift in Sources */,
 				9422DA3729506939002D0BE3 /* LocationManager.swift in Sources */,
+				9422DA4629509C86002D0BE3 /* MapViewState.swift in Sources */,
 				9422DA352950674C002D0BE3 /* UberMapViewRepresentable.swift in Sources */,
 				9422DA4029507699002D0BE3 /* LocatoinSearchView.swift in Sources */,
 				9422DA4229507A12002D0BE3 /* LocationSearchResultCell.swift in Sources */,
