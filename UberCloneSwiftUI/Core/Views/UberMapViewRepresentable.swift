@@ -54,6 +54,14 @@ extension UberMapViewRepresentable {
             parent.mapView.setRegion(region, animated: true)
         }
         
+        func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+            let polyLine = MKPolylineRenderer(overlay: overlay)
+            polyLine.strokeColor = .systemBlue
+            polyLine.lineWidth = 6
+            return polyLine
+            
+        }
+        
         //MARK: - Helper
         func andAndSelectAnnotation(withCoordinate coordinate: CLLocationCoordinate2D){
             self.parent.mapView.removeAnnotations(self.parent.mapView.annotations)
