@@ -26,13 +26,14 @@ struct RideRequestView: View {
                     
                     Rectangle()
                         .fill(Color(.systemGray3))
-                        .frame(width: 1, height: 24)
+                        .frame(width: 1, height: 30)
                     
                     Rectangle()
                         .fill(Color(.black))
                         .frame(width: 8, height: 8)
                     
-                }
+                }.padding(.bottom, 5)
+                
                 VStack(alignment: .leading, spacing: 24){
                     HStack{
                         Text("Current Location")
