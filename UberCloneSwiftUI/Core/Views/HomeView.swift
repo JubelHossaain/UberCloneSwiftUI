@@ -32,7 +32,7 @@ struct HomeView: View {
                     .padding(.leading)
                     .padding(.top, 4)
             }
-            if mapState == .locationSelected {
+            if mapState == .locationSelected || mapState == .polyLineAdded {
                 RideRequestView()
                     .transition(.move(edge: .bottom))
             }

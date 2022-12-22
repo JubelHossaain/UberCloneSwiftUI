@@ -30,10 +30,12 @@ struct UberMapViewRepresentable: UIViewRepresentable {
         case .searchingForLocation:
             break
         case .locationSelected:
-            if let coordinate = viewModel.selectedLocationCoordinate {
+            if let coordinate = viewModel.selectedUberLocation?.coordinate {
                 context.coordinator.andAndSelectAnnotation(withCoordinate: coordinate)
                 context.coordinator.configurePolyline(withDestinationCoordinate: coordinate)
             }
+            break
+        case .polyLineAdded: 
             break
         }
     }
@@ -88,27 +90,11 @@ extension UberMapViewRepresentable {
         
         func configurePolyline(withDestinationCoordinate coordinate: CLLocationCoordinate2D){
             guard let userLoatoinCoordinate = self.userLoatoinCoordinate else {return }
-            getDirectionRoute(from: userLoatoinCoordinate, to: coordinate) { route in
+            parent.viewModel.getDirectionRoute(from: userLoatoinCoordinate, to: coordinate) { route in
                 self.parent.mapView.addOverlay(route.polyline)
+                self.parent.mapState = .polyLineAdded
                 let rect  = self.parent.mapView.mapRectThatFits(route.polyline.boundingMapRect, edgePadding: .init(top: 64, left: 32, bottom: 500, right: 32))
                 self.parent.mapView.setRegion(MKCoordinateRegion(rect), animated: true)
-            }
-        }
-        
-        func getDirectionRoute(from userLocatoin: CLLocationCoordinate2D, to destination: CLLocationCoordinate2D, completion: @escaping(MKRoute) -> Void ){
-            let userPlacemark = MKPlacemark(coordinate: userLocatoin)
-            let destPlacemark = MKPlacemark(coordinate: destination)
-            let request = MKDirections.Request()
-            request.source = MKMapItem(placemark: userPlacemark)
-            request.destination = MKMapItem(placemark: destPlacemark)
-            let direction = MKDirections(request: request)
-            direction.calculate { response, error in
-                if let error = error {
-                    print("DEBUG : \(error.localizedDescription)")
-                    return
-                }
-                guard let route = response?.routes.first else {return}
-                completion(route)
             }
         }
         
